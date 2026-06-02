@@ -1,0 +1,20 @@
+[project]
+name = "jdaviz_vue3_migration"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyterlab",
+    "watchdog",
+    "pytest",
+    "black",
+    "jdaviz",
+]
+
+[tool.uv]
+package = false
+override-dependencies = [
+    "jdaviz",
+]
+
+[tool.uv.sources]
+jdaviz = { path = "../repos/jdaviz", editable = true }

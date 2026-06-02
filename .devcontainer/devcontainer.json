@@ -1,0 +1,28 @@
+{
+  "name": "jdaviz Vue 3 migration",
+  "containerEnv": {
+    "UV_CACHE_DIR": "${containerWorkspaceFolder}/.uv-cache"
+  },
+  "forwardPorts": [
+    8888
+  ],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter Lab",
+      "onAutoForward": "openBrowser",
+      "protocol": "http",
+      "visibility": "private"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "remote.autoForwardPorts": true,
+        "remote.restoreForwardedPorts": false
+      }
+    }
+  }
+}
